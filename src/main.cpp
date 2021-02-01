@@ -411,7 +411,7 @@ int main(int argc, char* argv[]) {
       vector<int>().swap(badchan); //clear badchan after use
     }
 
-    Par[3] /= nfrw.f_reco_scale; //changes the scale of the threshold from adcs to the reconstructed units
+    if (nfrw.f_reco_scale != 1.0) {Par[3] /= nfrw.f_reco_scale;} //changes the scale of the threshold from adcs to the reconstructed units
  
 
     // // if (!nfrw.data_properties.recoused){	     
